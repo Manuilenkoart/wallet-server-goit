@@ -28,5 +28,10 @@ module.exports = {
       }
     }
     return arryCosts;
+  },
+  async getAll() {
+    let products = await readFile(dbpathCosts);
+    products = JSON.parse(products);
+    return products;
   }
 };
